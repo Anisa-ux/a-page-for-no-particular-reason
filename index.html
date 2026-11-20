@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Page for No Particular Reason</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f2ec;
+    color: #39372f;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.small {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #999184;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 7vw, 48px);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    color: #898276;
+    font-size: 13px;
+    line-height: 2;
+    font-weight: 300;
+}
+
+button {
+    margin-top: 38px;
+    padding: 13px 27px;
+    background: transparent;
+    border: 1px solid #c9c1b5;
+    color: #514c43;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e9e4da;
+    border-color: #a69c8d;
+}
+
+.note {
+    display: none;
+    animation: appear 1.2s ease forwards;
+    margin-top: 45px;
+}
+
+.note p {
+    font-size: 13px;
+    line-height: 2.3;
+    color: #777165;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 45px;
+    height: 1px;
+    background: #c9c1b5;
+    margin: 35px auto;
+}
+
+.final {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    font-style: italic;
+    color: #51473f;
+    margin: 30px 0 12px;
+}
+
+.closing {
+    font-size: 11px;
+    color: #a0988b;
+    letter-spacing: 1px;
+    margin-top: 35px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    margin-top: 55px;
+    font-size: 9px;
+    color: #aaa294;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="small">A PERSONAL NOTE · 001</div>
+
+    <h1>A Page for No Particular Reason.</h1>
+
+    <div class="subtitle">
+        Just a little something.<br>
+        Nothing too important, I suppose.
+    </div>
+
+    <button onclick="openNote()" id="openBtn">
+        READ THE NOTE
+    </button>
+
+    <div class="note" id="note">
+
+        <div class="line"></div>
+
+        <p>
+            Well, hello there.
+        </p>
+
+        <p>
+            I hope life has been treating you kindly.
+            I hope you've had good days, found reasons
+            to laugh, and enjoyed the little things
+            along the way.
+        </p>
+
+        <p>
+            I don't really know how to put this into words.
+            Some things are just a little difficult to say
+            out loud.
+        </p>
+
+        <p>
+            But I guess there's no harm in being honest
+            once in a while.
+        </p>
+
+        <div class="line"></div>
+
+        <p>
+            So, here's one thing I wanted you to know.
+        </p>
+
+        <div class="final">Ti amo.</div>
+
+        <p>
+            That's all. Just three little words.
+        </p>
+
+        <div class="line"></div>
+
+        <p>
+            Anyway, take care of yourself.
+            I hope tomorrow brings you something nice.
+        </p>
+
+        <div class="closing">
+            — END OF NOTE —
+        </div>
+
+    </div>
+
+    <footer>
+        MADE WITH A LITTLE THOUGHT.
+    </footer>
+
+</div>
+
+<script>
+function openNote() {
+    const note = document.getElementById("note");
+    const button = document.getElementById("openBtn");
+
+    button.style.display = "none";
+    note.style.display = "block";
+}
+</script>
+
+</body>
+</html>
